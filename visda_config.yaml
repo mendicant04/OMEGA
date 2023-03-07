@@ -1,7 +1,7 @@
 data:
   dataset:
-    source_path: 'data/Visda/visda_train_100_RS_9.txt'
-    target_path: 'data/Visda/visda_test_100_UT_9.txt'
+    source_path: 'data/Visda/visda_train_10_RS_10.txt'
+    target_path: 'data/Visda/visda_test_10_UT_10.txt'
     n_share: 10 # number of classes to be shared
   dataloader:
     class_balance: False
@@ -12,20 +12,20 @@ model:
   temp: 0.05
 train:
   min_step: 10000 # minimum steps to run. run epochs until it exceeds the minStep
-  lr: 0.01 # learning rate for new layers. learning rate for finetune is 1/10 of lr
+  lr: 0.02 # learning rate for new layers. learning rate for finetune is 1/10 of lr
   multi: 0.1
   init_clus: 0.2
   weight_decay: 0.0005
   sgd_momentum: 0.9
   momentum: 0.0
   eta1: 0.05
-  eta2: 0.15
+  eta2: 0.1
   log_interval: 50
   margin: 0.5
   kmeans_interval: 400
   mov: 0.15
   clus_ratio: 0.5
-  warm_up: 1
+  warm_up: 0.65
   warm_dec: 0.1
 test:
   test_interval: 50
